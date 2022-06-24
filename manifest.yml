@@ -1,9 +1,7 @@
 ---
 applications:
-- name: myapp
-  routes:
-    - route: python-1234-aaaa-5678.cfapps.eu20.hana.ondemand.com
+- name: py-flask-vac-app
   path: ./
   memory: 128M
   buildpack: python_buildpack
-  command: python server.py
+  command: python py-flask-vac-app.py
