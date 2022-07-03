@@ -37,14 +37,14 @@ port = int(os.environ.get('PORT', 3000))
 @app.route('/')
 def hello():
     return "Hello from Python!"
-@app.route('/hh1/', methods=('GET', 'POST'))
-def hh1():
-    str_text = ""
-    str_area = ""
-    if request.method == 'POST':
-        str_text = request.form['strText']
-        str_area = request.form['strArea']
-    return render_template('index.html', strText =  str_text, strArea = str_area )    
+#@app.route('/hh1/', methods=('GET', 'POST'))
+#def hh1():
+#    str_text = ""
+#    str_area = ""
+#    if request.method == 'POST':
+#        str_text = request.form['strText']
+#        str_area = request.form['strArea']
+#    return render_template('index.html', strText =  str_text, strArea = str_area )    
 
 @app.route('/hh2/', methods=('GET', 'POST'))
 def hh2():
@@ -63,7 +63,7 @@ def hh2():
         responce = call_hh_webapi(text,region)
         analisys(dict_of_key_skills, responce)
         sorted_d = dict( sorted(dict_of_key_skills.items(), key=operator.itemgetter(1),reverse=True))
-        items_num = str(len(sorted_d)) + " items is found"
+        items_num = str(len(sorted_d)) + " skills are found"
     return render_template('index_2.html', strText =  str_text, strArea = str_area, skill_list = sorted_d, strItemsNum = items_num )    
 
 
@@ -100,7 +100,7 @@ def hh4():
 
 
 if __name__ == '__main__':
-    #app.run(host='0.0.0.0', port=port)
-    app.run(host='localhost', port=port)
+    app.run(host='0.0.0.0', port=port)
+    #app.run(host='localhost', port=port)
 
  
