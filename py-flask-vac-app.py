@@ -99,6 +99,26 @@ def hh4():
         return sorted_d
 
 
+@app.route('/hh5/', methods=('GET', 'POST'))
+def hh2():
+    str_text = ""
+    str_area = ""
+    sorted_d = {}
+    items_num = ""
+    if request.method == 'POST':
+        str_text = request.form['strText']
+        str_area = request.form['strArea']
+
+    
+        text = str_text
+        region = str_area
+        dict_of_key_skills = {} 
+        responce = call_hh_webapi(text,region)
+        #analisys(dict_of_key_skills, responce)
+        #sorted_d = dict( sorted(dict_of_key_skills.items(), key=operator.itemgetter(1),reverse=True))
+        #items_num = str(len(sorted_d)) + " skills are found"
+    return render_template('index_2.html', strText =  str_text, strArea = str_area, skill_list = sorted_d, strItemsNum = items_num )
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=port)
     #app.run(host='localhost', port=port)
