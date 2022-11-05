@@ -9,7 +9,7 @@
 	<div style="margin-left: 5%;" >
 		<h1 class="text-primary" >Welcome to the skills analyzer</h1>
    
-		<form action="{{ url_for('hh6') }}" method="post">
+		<form action="{{ url_for('bs1') }}" method="post">
 			<dl>
 				<dt> <label for="strText">Text	: </label> </dt>
 				<dd> <input type="text" name="strText" id="strText" value="{{ request.form['strText'] }}"> </dd>
@@ -22,9 +22,8 @@
 	
 	<div class="w-50 p-3">
 		<h3>
-			<span class="text-info">{{ strText }};	</span>
-			<span class="text-info">{{ strArea }};	</span>
-			<span>{{ strItemsNum }}:</span>		
+			<span class="text-info">{{ strText }}	{{ strArea }}</span>
+			<span>{{ strItemsNum }}</span>		
 		</h3>	
 		<table class="table table-striped">
 			<thead>

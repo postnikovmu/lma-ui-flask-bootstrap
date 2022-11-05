@@ -133,8 +133,8 @@ def hh5():
 
 
 # The endpoint for the central backend service 'go_vac_back_serv'
-@app.route('/hh6/', methods=('GET', 'POST'))
-def hh6():
+@app.route('/bs1/', methods=('GET', 'POST'))
+def bs1():
     str_text = ""
     str_area = ""
     sorted_d = {}
