@@ -1,7 +1,8 @@
 ---
 applications:
-- name: py-flask-vac-app
+- name: lma-ui-flask-bootstrap
   path: ./
-  memory: 128M
+  memory: 256M
+  disk_quota: 256MB
   buildpack: python_buildpack
   command: python py-flask-vac-app.py

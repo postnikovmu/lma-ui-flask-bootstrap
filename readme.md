@@ -1,4 +1,4 @@
-# py-flask-vac-app
+# lma-ui-flask-bootstrap
 Python/Flask web app for calling microservice
 
 ## General Info

@@ -7,7 +7,7 @@ import operator
 
 
 def call_hh_webapi(text,region):
-    api_url = 'https://go_web_hh_vac.cfapps.us10.hana.ondemand.com/hh4?text=' + text + '&' + 'area=' + region
+    api_url = 'https://lma-extractor-hh.cfapps.us10.hana.ondemand.com/hh4?text=' + text + '&' + 'area=' + region
     res = requests.get(api_url)
 
     # Convert data to list of dicts
@@ -30,7 +30,7 @@ def analisys(dict_of_key_skills, responce):
 
 
 def call_back_serv(text,region):
-    api_url = 'https://govacbackserv.cfapps.us10.hana.ondemand.com/?text=' + text + '&' + 'area=' + region
+    api_url = 'https://lma-dispatcher.cfapps.us10.hana.ondemand.com/?text=' + text + '&' + 'area=' + region
     res = requests.get(api_url)
     data = json.loads(res.text)
     responce_json = data
